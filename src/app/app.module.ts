@@ -2,15 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
+import { HashFileService } from './services/hash-file.service';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, UploadFileComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxFileDropModule
   ],
-  providers: [],
+  providers: [HashFileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
